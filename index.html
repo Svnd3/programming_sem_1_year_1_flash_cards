@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="ui.css">
 </head>
 <body>
-  <div id="loading-screen"><div class="loader"><div class="loader-title">Sundays</div><div class="loader-bar"><div class="loader-progress" id="progress-bar"></div></div><div class="loader-percent" id="progress-text">0%</div></div></div>
+  <div id="loading-screen"><div class="loader"><div class="loader-orbit" aria-hidden="true"><span class="loader-card loader-card-a"></span><span class="loader-card loader-card-b"></span><span class="loader-card loader-card-c"></span><span class="loader-spark loader-spark-a"></span><span class="loader-spark loader-spark-b"></span><span class="loader-spark loader-spark-c"></span></div><div class="loader-title">Sundays</div><div class="loader-bar"><div class="loader-progress" id="progress-bar"></div></div><div class="loader-percent" id="progress-text">0%</div></div></div>
   <header class="topbar">
     <a class="wordmark" href="#">Sundays</a>
     <div class="header-actions">
@@ -24,7 +24,7 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10a7.5 7.5 0 1 1 .7 5.7M4.5 4.5V10h5.5"/></svg>
   </button>
   <div id="instructions">Drag to rotate <i>·</i> Scroll to zoom <i>·</i> Choose a card</div>
-  <div id="completion-screen" aria-hidden="true"><div class="fact-content"><span id="fact-category"></span><h1>Did you know?</h1><p id="completion-fact"></p></div></div>
+  <div id="completion-screen" aria-hidden="true"><div id="screen-wash"></div><div class="fact-content"><span id="fact-category"></span><h1>Did you know?</h1><p id="completion-fact"></p></div></div>
   <div id="photo-modal" aria-hidden="true">
     <article class="flashcard" id="modal-card" tabindex="-1">
       <button class="modal-close" id="modal-close" aria-label="Close">×</button>
