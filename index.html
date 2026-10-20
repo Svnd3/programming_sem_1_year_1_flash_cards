@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6eee3">
+  <title>Sundays</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <div id="loading-screen"><div class="loader"><div class="loader-title">Sundays</div><div class="loader-bar"><div class="loader-progress" id="progress-bar"></div></div><div class="loader-percent" id="progress-text">0%</div></div></div>
+  <header class="topbar">
+    <a class="wordmark" href="#">Sundays</a>
+    <div class="header-actions">
+      <!-- Temporary QA control: open and align every card to preview the completion sequence. -->
+      <button class="test-finish" id="test-finish" type="button" title="Temporarily mark every flashcard as studied">Test all cards</button>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open topics" aria-expanded="false" aria-controls="topics"><span></span><span></span><span></span></button>
+    </div>
+    <nav id="topics" aria-label="Flashcard topics" aria-hidden="true"></nav>
+  </header>
+  <div id="canvas-container"></div>
+  <button class="redo-button" id="redo-button" type="button" aria-label="Redo from the beginning" title="Start over">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10a7.5 7.5 0 1 1 .7 5.7M4.5 4.5V10h5.5"/></svg>
+  </button>
+  <div id="instructions">Drag to rotate <i>·</i> Scroll to zoom <i>·</i> Choose a card</div>
+  <div id="completion-screen" aria-hidden="true"><div class="fact-content"><span id="fact-category"></span><h1>Did you know?</h1><p id="completion-fact"></p></div></div>
+  <div id="photo-modal" aria-hidden="true">
+    <article class="flashcard" id="modal-card" tabindex="-1">
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      <div class="card-inner">
+        <section class="card-face card-front"><h1></h1></section>
+        <section class="card-face card-back"><h2></h2><p></p><code hidden></code></section>
+      </div>
+    </article>
+  </div>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"}}</script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
